@@ -27,4 +27,15 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/home/home.component').then((m) => m.HomeComponent),
   },
+  {
+    path: 'cart',
+    loadComponent: () =>
+      loadRemoteModule('cart', './Component').then((m) => m.AppComponent),
+  },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full',
+  },
+
 ];

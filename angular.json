@@ -734,7 +734,7 @@
 					}
 				}
 			}
-		}
+    }
 	},
 	"cli": {
 		"analytics": false

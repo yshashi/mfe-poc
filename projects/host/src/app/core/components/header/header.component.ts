@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
             <div class="flex justify-between items-center">
                 <a routerLink="/" class="text-2xl font-bold">ShopEase</a>
                 <div class="flex space-x-4">
-                    <a href="#" class="hover:text-gray-300"><i class="fas fa-shopping-cart"></i> Cart</a>
+                    <a routerLink="/cart" class="hover:text-gray-300"><i class="fas fa-shopping-cart"></i> Cart</a>
                     <a href="#" class="hover:text-gray-300"><i class="fas fa-user"></i> Account</a>
                 </div>
             </div>
