@@ -1,9 +1,10 @@
-import { Component, inject, OnDestroy, OnInit } from '@angular/core';
+import { Component, DestroyRef } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { EventService } from './event.service';
+import { SharedService } from 'shared';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-cart',
   standalone: true,
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
@@ -11,5 +12,11 @@ import { EventService } from './event.service';
 })
 export class AppComponent {
   title = 'cart';
-  constructor(private event: EventService) {}
+  constructor(private shared: SharedService) {
+    this.shared.on('cartItems')
+    .pipe(takeUntilDestroyed())
+    .subscribe((res) => {
+      console.log(res);
+    })
+  }
 }

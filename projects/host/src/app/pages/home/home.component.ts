@@ -1,19 +1,22 @@
 import { Component, inject } from '@angular/core';
+import { SharedService } from 'shared';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrl: './home.component.scss',
 })
 export class HomeComponent {
+  constructor(private shared: SharedService) {}
   addToCart() {
-    const data = {
-      id: 1,
-      name: 'test'
-    }
-    const event = new CustomEvent('addToCart', { detail: data });
-    window.dispatchEvent(event);
+    this.shared.emit({
+      name: 'addToCart',
+      value: {
+        name: 'Product Name',
+        price: 19.99,
+      },
+    });
   }
 }

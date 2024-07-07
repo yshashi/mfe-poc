@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { SharedService } from 'shared';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,7 @@ import { RouterLink } from '@angular/router';
             <div class="flex justify-between items-center">
                 <a routerLink="/" class="text-2xl font-bold">ShopEase</a>
                 <div class="flex space-x-4">
-                    <a routerLink="/cart" class="hover:text-gray-300"><i class="fas fa-shopping-cart"></i> Cart</a>
+                    <a (click)="navigateTo('/cart')" class="hover:text-gray-300"><i class="fas fa-shopping-cart"></i> Cart {{products.length}}</a>
                     <a href="#" class="hover:text-gray-300"><i class="fas fa-user"></i> Account</a>
                 </div>
             </div>
@@ -28,4 +29,21 @@ import { RouterLink } from '@angular/router';
     </header>
   `,
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+
+  products: any = [];
+
+  constructor(private shared: SharedService, private router: Router) {
+    this.shared.on('addToCart').subscribe((product) => {
+      this.products = [...this.products, product];
+    });
+  }
+
+  navigateTo(url: string) {
+    this.router.navigate([url]);
+    this.shared.emit({
+      name: 'cartItems',
+      value: this.products
+    })
+  }
+}
