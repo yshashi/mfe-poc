@@ -1,3 +1,7 @@
 {
-	"remote": "http://localhost:4201/remoteEntry.json"
+  "remote": "http://localhost:4201/remoteEntry.json",
+  "products": "http://localhost:4202/remoteEntry.json",
+  "about": "http://localhost:4203/remoteEntry.json",
+  "contact": "http://localhost:4204/remoteEntry.json",
+  "cart": "http://localhost:4205/remoteEntry.json"
 }

@@ -18,9 +18,9 @@ import { RouterLink } from '@angular/router';
             <nav class="mt-4">
                 <ul class="flex space-x-6">
                     <li><a routerLink="/home" class="hover:text-gray-300">Home</a></li>
-                    <li><a href="#" class="hover:text-gray-300">Products</a></li>
-                    <li><a href="#" class="hover:text-gray-300">About</a></li>
-                    <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+                    <li><a routerLink="/products" class="hover:text-gray-300">Products</a></li>
+                    <li><a routerLink="/about" class="hover:text-gray-300">About</a></li>
+                    <li><a routerLink="/contact" class="hover:text-gray-300">Contact</a></li>
                     <li><a routerLink="/remote" class="hover:text-gray-300">Remote</a></li>
                 </ul>
             </nav>
