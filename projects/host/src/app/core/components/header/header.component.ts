@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { SharedService } from 'shared';
+import { Product } from '../../../shared/product.service';
 
 @Component({
   selector: 'app-header',
@@ -40,6 +41,12 @@ export class HeaderComponent {
 
   constructor(private shared: SharedService, private router: Router) {
     this.shared.on('addToCart').subscribe((product) => {
+      const existingProduct = this.products.find((p: Product) => p.id === product.id);
+      if (existingProduct) {
+        existingProduct.quantity = existingProduct.quantity + 1;
+        return;
+      }
+
       this.products = [...this.products, product];
     });
   }
