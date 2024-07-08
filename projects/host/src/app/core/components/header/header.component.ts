@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { SharedService } from 'shared';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, RouterLinkActive],
   template: `
     <header class="bg-gray-800 text-white">
         <div class="container mx-auto px-4 py-3">
@@ -18,16 +18,21 @@ import { SharedService } from 'shared';
             </div>
             <nav class="mt-4">
                 <ul class="flex space-x-6">
-                    <li><a routerLink="/home" class="hover:text-gray-300">Home</a></li>
-                    <li><a routerLink="/products" class="hover:text-gray-300">Products</a></li>
-                    <li><a routerLink="/about" class="hover:text-gray-300">About</a></li>
-                    <li><a routerLink="/contact" class="hover:text-gray-300">Contact</a></li>
-                    <li><a routerLink="/remote" class="hover:text-gray-300">Remote</a></li>
+                    <li><a routerLink="/home" routerLinkActive="active" class="hover:text-gray-300 text-gray-400">Home</a></li>
+                    <li><a routerLink="/products" routerLinkActive="active" class="hover:text-gray-300 text-gray-400">Products</a></li>
+                    <li><a routerLink="/about" routerLinkActive="active" class="hover:text-gray-300 text-gray-400">About</a></li>
+                    <li><a routerLink="/contact" routerLinkActive="active" class="hover:text-gray-300 text-gray-400">Contact</a></li>
+                    <li><a routerLink="/remote" routerLinkActive="active" class="hover:text-gray-300 text-gray-400">Remote</a></li>
                 </ul>
             </nav>
         </div>
     </header>
   `,
+  styles: `
+  .active{
+    @apply text-white
+  }
+  `
 })
 export class HeaderComponent {
 
