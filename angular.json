@@ -38,10 +38,10 @@
 					}
 				},
 				"extract-i18n": {
-					"builder": "@angular-devkit/build-angular:extract-i18n"
+					"builder": "@angular/build:extract-i18n"
 				},
 				"test": {
-					"builder": "@angular-devkit/build-angular:karma",
+					"builder": "@angular/build:karma",
 					"options": {
 						"polyfills": [
 							"zone.js",
@@ -62,7 +62,7 @@
 					}
 				},
 				"esbuild": {
-					"builder": "@angular-devkit/build-angular:application",
+					"builder": "@angular/build:application",
 					"options": {
 						"outputPath": "dist/host",
 						"index": "projects/host/src/index.html",
@@ -109,7 +109,7 @@
 					"defaultConfiguration": "production"
 				},
 				"serve-original": {
-					"builder": "@angular-devkit/build-angular:dev-server",
+					"builder": "@angular/build:dev-server",
 					"configurations": {
 						"production": {
 							"buildTarget": "host:esbuild:production"
@@ -160,10 +160,10 @@
 					}
 				},
 				"extract-i18n": {
-					"builder": "@angular-devkit/build-angular:extract-i18n"
+					"builder": "@angular/build:extract-i18n"
 				},
 				"test": {
-					"builder": "@angular-devkit/build-angular:karma",
+					"builder": "@angular/build:karma",
 					"options": {
 						"polyfills": [
 							"zone.js",
@@ -184,7 +184,7 @@
 					}
 				},
 				"esbuild": {
-					"builder": "@angular-devkit/build-angular:application",
+					"builder": "@angular/build:application",
 					"options": {
 						"outputPath": "dist/remote",
 						"index": "projects/remote/src/index.html",
@@ -231,7 +231,7 @@
 					"defaultConfiguration": "production"
 				},
 				"serve-original": {
-					"builder": "@angular-devkit/build-angular:dev-server",
+					"builder": "@angular/build:dev-server",
 					"configurations": {
 						"production": {
 							"buildTarget": "remote:esbuild:production"
@@ -282,10 +282,10 @@
 					}
 				},
 				"extract-i18n": {
-					"builder": "@angular-devkit/build-angular:extract-i18n"
+					"builder": "@angular/build:extract-i18n"
 				},
 				"test": {
-					"builder": "@angular-devkit/build-angular:karma",
+					"builder": "@angular/build:karma",
 					"options": {
 						"polyfills": [
 							"zone.js",
@@ -306,7 +306,7 @@
 					}
 				},
 				"esbuild": {
-					"builder": "@angular-devkit/build-angular:application",
+					"builder": "@angular/build:application",
 					"options": {
 						"outputPath": "dist/products",
 						"index": "projects/products/src/index.html",
@@ -353,7 +353,7 @@
 					"defaultConfiguration": "production"
 				},
 				"serve-original": {
-					"builder": "@angular-devkit/build-angular:dev-server",
+					"builder": "@angular/build:dev-server",
 					"configurations": {
 						"production": {
 							"buildTarget": "products:esbuild:production"
@@ -404,10 +404,10 @@
 					}
 				},
 				"extract-i18n": {
-					"builder": "@angular-devkit/build-angular:extract-i18n"
+					"builder": "@angular/build:extract-i18n"
 				},
 				"test": {
-					"builder": "@angular-devkit/build-angular:karma",
+					"builder": "@angular/build:karma",
 					"options": {
 						"polyfills": [
 							"zone.js",
@@ -428,7 +428,7 @@
 					}
 				},
 				"esbuild": {
-					"builder": "@angular-devkit/build-angular:application",
+					"builder": "@angular/build:application",
 					"options": {
 						"outputPath": "dist/about",
 						"index": "projects/about/src/index.html",
@@ -475,7 +475,7 @@
 					"defaultConfiguration": "production"
 				},
 				"serve-original": {
-					"builder": "@angular-devkit/build-angular:dev-server",
+					"builder": "@angular/build:dev-server",
 					"configurations": {
 						"production": {
 							"buildTarget": "about:esbuild:production"
@@ -526,10 +526,10 @@
 					}
 				},
 				"extract-i18n": {
-					"builder": "@angular-devkit/build-angular:extract-i18n"
+					"builder": "@angular/build:extract-i18n"
 				},
 				"test": {
-					"builder": "@angular-devkit/build-angular:karma",
+					"builder": "@angular/build:karma",
 					"options": {
 						"polyfills": [
 							"zone.js",
@@ -550,7 +550,7 @@
 					}
 				},
 				"esbuild": {
-					"builder": "@angular-devkit/build-angular:application",
+					"builder": "@angular/build:application",
 					"options": {
 						"outputPath": "dist/contact",
 						"index": "projects/contact/src/index.html",
@@ -597,7 +597,7 @@
 					"defaultConfiguration": "production"
 				},
 				"serve-original": {
-					"builder": "@angular-devkit/build-angular:dev-server",
+					"builder": "@angular/build:dev-server",
 					"configurations": {
 						"production": {
 							"buildTarget": "contact:esbuild:production"
@@ -648,10 +648,10 @@
 					}
 				},
 				"extract-i18n": {
-					"builder": "@angular-devkit/build-angular:extract-i18n"
+					"builder": "@angular/build:extract-i18n"
 				},
 				"test": {
-					"builder": "@angular-devkit/build-angular:karma",
+					"builder": "@angular/build:karma",
 					"options": {
 						"polyfills": [
 							"zone.js",
@@ -672,7 +672,7 @@
 					}
 				},
 				"esbuild": {
-					"builder": "@angular-devkit/build-angular:application",
+					"builder": "@angular/build:application",
 					"options": {
 						"outputPath": "dist/cart",
 						"index": "projects/cart/src/index.html",
@@ -719,7 +719,7 @@
 					"defaultConfiguration": "production"
 				},
 				"serve-original": {
-					"builder": "@angular-devkit/build-angular:dev-server",
+					"builder": "@angular/build:dev-server",
 					"configurations": {
 						"production": {
 							"buildTarget": "cart:esbuild:production"
@@ -742,7 +742,7 @@
       "prefix": "lib",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "builder": "@angular/build:ng-packagr",
           "options": {
             "project": "projects/shared/ng-package.json"
           },
@@ -757,7 +757,7 @@
           "defaultConfiguration": "production"
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "@angular/build:karma",
           "options": {
             "tsConfig": "projects/shared/tsconfig.spec.json",
             "polyfills": [
@@ -771,5 +771,31 @@
 	},
 	"cli": {
 		"analytics": false
-	}
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "type": "component"
+    },
+    "@schematics/angular:directive": {
+      "type": "directive"
+    },
+    "@schematics/angular:service": {
+      "type": "service"
+    },
+    "@schematics/angular:guard": {
+      "typeSeparator": "."
+    },
+    "@schematics/angular:interceptor": {
+      "typeSeparator": "."
+    },
+    "@schematics/angular:module": {
+      "typeSeparator": "."
+    },
+    "@schematics/angular:pipe": {
+      "typeSeparator": "."
+    },
+    "@schematics/angular:resolver": {
+      "typeSeparator": "."
+    }
+  }
 }
