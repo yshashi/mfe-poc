@@ -13,7 +13,6 @@
     "src/main.ts"
   ],
   "include": [
-    "src/**/*.d.ts",
-    "../../dist/shared"
+    "src/**/*.d.ts"
   ]
 }

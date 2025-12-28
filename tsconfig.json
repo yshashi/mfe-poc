@@ -17,7 +17,8 @@
     "paths": {
       "shared": [
         "./dist/shared"
-      ]
+      ],
+      "about/*": ["./projects/about/src/*"],
     },
     "importHelpers": true,
     "target": "ES2022",
