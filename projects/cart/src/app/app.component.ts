@@ -9,11 +9,10 @@ import {
 } from '../../../shared/src/lib/custom-event.service';
 
 @Component({
-  selector: 'app-cart',
-  standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+    selector: 'app-cart',
+    imports: [RouterOutlet],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'cart';

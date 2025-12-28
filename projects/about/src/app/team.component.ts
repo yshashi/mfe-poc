@@ -1,10 +1,9 @@
 import { Component, EventEmitter, Input, input, Output, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'app-team',
-  standalone: true,
-  imports: [],
-  template: ` <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+    selector: 'app-team',
+    imports: [],
+    template: ` <div class="bg-gray-100 p-6 rounded-lg shadow-md">
     <h2 class="text-3xl font-semibold text-gray-800 mb-4 text-center">
       Meet Our {{name}} Team
     </h2>
@@ -27,7 +26,7 @@ import { Component, EventEmitter, Input, input, Output, ViewEncapsulation } from
       }
     </div>
   </div>`,
-  encapsulation: ViewEncapsulation.None,
+    encapsulation: ViewEncapsulation.None
 })
 export class TeamComponent {
   title = 'team';

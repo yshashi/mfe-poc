@@ -4,10 +4,9 @@ import { SharedService } from 'shared';
 import { Product } from '../../../shared/product.service';
 
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [RouterLink, RouterLinkActive],
-  template: `
+    selector: 'app-header',
+    imports: [RouterLink, RouterLinkActive],
+    template: `
     <header class="bg-gray-800 text-white">
         <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
@@ -29,7 +28,7 @@ import { Product } from '../../../shared/product.service';
         </div>
     </header>
   `,
-  styles: `
+    styles: `
   .active{
     @apply text-white
   }

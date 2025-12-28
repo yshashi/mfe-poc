@@ -5,11 +5,10 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { CustomEventService } from '../../../../../shared/src/lib/custom-event.service';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+    selector: 'app-home',
+    imports: [],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss'
 })
 export class HomeComponent {
   #productService = inject(ProductService);

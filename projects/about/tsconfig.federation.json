@@ -9,6 +9,7 @@
   ],
   "include": [
     "src/**/*.d.ts",
-    "src/app/elements/team-element.ts"
+    "src/app/elements/team-element.ts",
+    "../../dist/shared"
   ]
 }
